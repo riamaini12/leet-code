@@ -1,0 +1,25 @@
+class Solution {
+    public int firstUniqChar(String s) {
+       int k = 0;
+        
+         if(s.length()!=0){
+            for(Character ch: s.toCharArray()){
+                if(s.indexOf(ch)==s.lastIndexOf(ch)){
+                    k = s.indexOf(ch);
+                    break;
+                 }
+                else{
+                    k = -1;
+                }
+            }
+        }
+        
+        else{
+            k = -1;
+        }
+        
+        
+        return k;
+        
+    }
+}
